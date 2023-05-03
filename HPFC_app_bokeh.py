@@ -35,6 +35,8 @@ with st.container():
         with HPFC_Prognose[c]:
             st.header("HPFC Prognose - " + country)
             prog = bok( x_axis_type='datetime', y_axis_label = "HPFC (EUR/MWh)" )
+            prog.plot_height=400
+            prog.plot_width=800
             prog.xaxis.formatter = DatetimeTickFormatter(years="%Y", months="%d/%m/%Y", days="%d/%m/%Y", hours="%d/%m %Hh", hourmin="%d/%m %Hh%M",  minutes="%d/%m %Hh%Mmin%S")
             for d, date in enumerate(prog_dates):
                 prog.line(x=merged_df["Datum"], y=merged_df["HPFC_" + country + "_" + date], line_color=prog_colors[d], legend_label=date)
@@ -71,6 +73,8 @@ with st.container():
         with monatlicher_Mittelwerte[c]:
             st.header("Monatlicher Mittelwert von HPFC Prognose - " + country)
             mittelwert = bok( x_axis_type='datetime', y_axis_label = "HPFC (EUR/MWh)" )
+            mittelwert.plot_height=400
+            mittelwert.plot_width=800
             mittelwert.xaxis.formatter = DatetimeTickFormatter(years="%Y", months="%d/%m/%Y", days="%d/%m/%Y", hours="%d/%m %Hh", hourmin="%d/%m %Hh%M",  minutes="%d/%m %Hh%Mmin%S")
             for d, date in enumerate(mittelwert_dates):
                 mittelwert.line(x=base_per_month["Datum"], y=base_per_month["HPFC_" + country + "_" + date], line_width=2, line_color=mittelwert_colors[d][0], legend_label=date+" - base")
