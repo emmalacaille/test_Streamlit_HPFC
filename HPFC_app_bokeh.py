@@ -8,7 +8,7 @@ from data_analysis import get_HPFC_data, merge_HPFC_data
 
 st.set_page_config(
     page_title="Streamlit & Bokeh for HPFC",
-    page_icon="📈🚂🚋🚉",
+    page_icon="📈🚂🚉",
     layout="wide"
 )
 
