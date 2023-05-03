@@ -31,7 +31,7 @@ merged_df = merge_HPFC_data(countries, dates)
 peak_df = merged_df.set_index('Datum').between_time('8:00', '19:30').reset_index()
 st.dataframe(merged_df)
 
-ne_plotte_pas_tout = """
+#ne_plotte_pas_tout = """
 HPFC_Prognose = st.columns(len(countries))
 colors = ["green", "blue", "red"]
 dates_prognose = [dates[d] for d in [0,1,3]]
