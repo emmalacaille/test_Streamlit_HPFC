@@ -1,7 +1,7 @@
 import pandas as pd
 from datetime import datetime
 
-data_path = "C:/Users/u241397/OneDrive - SBB/Docs/Data visualisation/HPFC/data/HPFC_data/"
+data_path = "small_HPFC_data/"
 
 
 def get_HPFC_data(country, date):
