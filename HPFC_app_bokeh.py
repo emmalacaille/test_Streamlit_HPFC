@@ -40,6 +40,7 @@ with st.container():
             prog.xaxis.formatter = DatetimeTickFormatter(years="%Y", months="%d/%m/%Y", days="%d/%m/%Y", hours="%d/%m %Hh", hourmin="%d/%m %Hh%M",  minutes="%d/%m %Hh%Mmin%S")
             for d, date in enumerate(prog_dates):
                 prog.line(x=merged_df["Datum"], y=merged_df["HPFC_" + country + "_" + date], line_color=prog_colors[d], legend_label=date)
+            prog.legend.click_policy="hide"
             st.bokeh_chart(prog, use_container_width=True)
  
 
@@ -79,6 +80,7 @@ with st.container():
             for d, date in enumerate(mittelwert_dates):
                 mittelwert.line(x=base_per_month["Datum"], y=base_per_month["HPFC_" + country + "_" + date], line_width=2, line_color=mittelwert_colors[d][0], legend_label=date+" - base")
                 mittelwert.line(x=peak_per_month["Datum"], y=peak_per_month["HPFC_" + country + "_" + date], line_width=2, line_color=mittelwert_colors[d][1], legend_label=date+" - peak")
+            mittelwert.legend.click_policy="hide"
             st.bokeh_chart(mittelwert, use_container_width=True)
         
     
