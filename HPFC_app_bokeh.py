@@ -80,7 +80,7 @@ peak_per_month.columns = [col_name+"_peak" for col_name in peak_per_month.column
 peak_per_month["Datum"] = peak_per_month.index.get_level_values('Datum')
 peak_per_month = peak_per_month.reset_index(drop=True)
 per_month =  pd.merge(base_per_month, peak_per_month, on="Datum")
-st.dataframe(per_month)
+
 with st.container():
     monatlicher_Mittelwerte = st.columns(len(countries))
     for c, country in enumerate(countries):
