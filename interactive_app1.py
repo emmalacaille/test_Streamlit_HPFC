@@ -16,7 +16,7 @@ st.set_page_config(
 st.title("Preistool Energie-SBB")
 st.write("Sie können mit diesem Tool die Energiepreise für verschiedene Länder, Datum und Produkte vergleichen.")
 
-countries = ["CH", "DE", "FR"]#, "AT"]
+countries = ["CH", "DE", "FR", "AT"]
 
 with st.sidebar:
 
