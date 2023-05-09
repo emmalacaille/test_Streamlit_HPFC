@@ -1,9 +1,10 @@
 import pandas as pd
 from datetime import datetime
+import streamlit as st
 
 data_path = "small_HPFC_data/"
 
-
+@st.cache_data
 def get_HPFC_data(country, date):
     # need date as 8-characters string : yyyymmdd
     # will need to implement error detection at some point
@@ -22,7 +23,7 @@ def get_HPFC_data(country, date):
     
     return df
 
-
+@st.cache_data
 def merge_HPFC_data(countries, dates):
     merged_df = pd.DataFrame()
     for country in countries:
