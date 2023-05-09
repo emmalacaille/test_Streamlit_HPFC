@@ -3,7 +3,7 @@ from datetime import datetime
 import streamlit as st
 
 data_path = "small_HPFC_data/"
-data_path = "K:/Dept/W/HUV.A04974/1000_Handel Front Office/1100_Admin/1170_User/Lelievre/HPFC/"
+#data_path = "K:/Dept/W/HUV.A04974/1000_Handel Front Office/1100_Admin/1170_User/Lelievre/HPFC/"
 
 @st.cache_data
 def get_HPFC_data(country, date):
