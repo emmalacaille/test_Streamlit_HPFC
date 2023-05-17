@@ -54,7 +54,7 @@ if "graph_dates" not in st.session_state:
 if "granularity" not in st.session_state:
     st.session_state.granularity = granularities[0]
 
-data_path = "C:/Users/u241397/OneDrive - SBB/Docs/Data visualisation/HPFC/data/HPFC_data/"
+data_path = "small_HPFC_data/"
 #data_path = "K:/Dept/W/HUV.A04974/1000_Handel Front Office/1100_Admin/1170_User/Lelievre/HPFC/"
 
 
