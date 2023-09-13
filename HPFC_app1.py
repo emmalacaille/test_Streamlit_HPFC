@@ -120,7 +120,7 @@ with st.container():
     with monatlicher_Mittelwerte[2]:
         st.header("Monatlicher Mittelwert von HPFC Prognose - " + countries[2] + "\nbokeh")
         mittelwert = bok(
-            y_axis_label = "HPFC (EUR/MWh)"
+            y_axis_label = "HPFC (EUR/MWh)hfoejfipezjfeom"
         )
         mittelwert.line(x=per_month["Datum"], y=per_month["HPFC_FR_20230407"], line_color="blue")
         mittelwert.line(x=per_month["Datum"], y=per_month["HPFC_FR_20230413"], line_color="lightblue")

@@ -71,6 +71,6 @@ with st.container():
             for d, date in enumerate(mittelwert_dates):
                 mittelwert.add_trace(go.Line(x=base_per_month["Datum"], y=base_per_month["HPFC_" + country + "_" + date], name=date+ " - base", line=dict(color=mittelwert_colors[d][0], width=2)))
                 mittelwert.add_trace(go.Line(x=peak_per_month["Datum"], y=peak_per_month["HPFC_" + country + "_" + date], name=date+ " - peak", line=dict(color=mittelwert_colors[d][1], width=2)))
-            mittelwert.update_layout(yaxis_title="HPFC (EUR/MWh)")
+            mittelwert.update_layout(yaxis_title="HPFC (EUR/MWh) uizgfuiez")
             st.plotly_chart(mittelwert, use_container_width=True)
         
